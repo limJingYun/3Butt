@@ -1,0 +1,90 @@
+//****************THIS ALU FILE IS TAKEN FROM 
+//****************OUR PREVIOUS 1D PROJECT
+
+global Inst {
+  const ADD   = 6b000000; //opcode for addition     a+b
+  const SUB   = 6b000001; //opcode for subtraction  a-b
+  const MUL   = 6b000010; //opcode for multiplication a*b, only last 8 bits are displayed
+  const SHL   = 6b100000; //opcode for shift left, 8=2^3, using b[2:0]
+  const SHR   = 6b100001; //opcode for shift right
+  const SRA   = 6b100011; //opcode for shift right with sign extension
+  const AND   = 6b011000; //opcode for And 
+  const OR    = 6b011110; //opcode for Or 
+  const LDR   = 6b011010; //opcode for LDR(A)
+  const XOR   = 6b010110; //opcode for Xor 
+  const CMPEQ = 6b110011; //opcode for compare equal
+  const CMPLT = 6b110101; //opcode for compare less than
+  const CMPLE = 6b110111; //opcode for compare less than or equal to
+}
+//input a,b,alufm, output z,v,n,alu 
+module alu (
+    input a[8],
+    input b[8],
+    input alufn[6],
+    output z,
+    output v,
+    output n,
+    output alu[8]
+    
+  ) {
+ 
+
+  sig alu1[16];      // result
+  sig n1[1];         // template for n, v, z
+  sig v1[1];
+  sig z1[1];
+  
+  always {
+    n1=0;
+    v1=0;
+    z1=0;
+    // Perform the operation
+    case (alufn) {
+      Inst.MUL:       //multiplication
+        alu1 = a*b;
+      Inst.ADD:
+        alu1 = a+b;  // addition
+        n1 = alu1[7];
+        if (alu1[7:0]==8b00000000) {z1=1;}
+        v1 = a[7]&b[7]&(~n1) | (~a[7])&(~b[7])&n1;
+      Inst.SUB:
+        alu1 = a-b;   // subtraction
+        n1 = alu1[7];
+        if (alu1[7:0]==8b00000000) {z1=1;}
+        v1 = a[7]&(~b[7])&(~n1) | (~a[7])&b[7]&n1; //for subtraction, when a is +ve, b is -ve, s is -ve, its overflow.
+      Inst.SHL:
+        alu1 = a << b[2:0];  // shift left 
+      Inst.SHR:
+        alu1 = a >> b[2:0];  // shift right
+      Inst.SRA:
+        alu1 = $signed(a) >>> b[2:0];  // shift right with sign extension
+      Inst.AND:
+        alu1 = a & b;   // bit-wise AND
+      Inst.OR:
+        alu1 = a | b;   // bit-wise OR
+      Inst.XOR:
+        alu1 = a ^ b ;   // bit-wise XOR
+      Inst.LDR:         
+        alu1 = a;       //LDR
+      Inst.CMPLT:
+        if ($signed(a)<$signed(b)) {
+          alu1 = 8b00000001;}
+        else {
+          alu1 = 8b00000000;}
+      Inst.CMPLE:
+        if ($signed(a)<=$signed(b)) {
+          alu1 = 8b00000001;}
+        else {
+          alu1 = 8b00000000;}
+      Inst.CMPEQ:
+        if ($signed(a)==$signed(b)) {
+          alu1 = 8b00000001;}
+        else {
+          alu1 = 8b00000000;}
+    }
+    v=v1;   //output z,v,n,alu
+    n=n1;
+    z=z1;
+    alu=alu1[7:0];
+  }
+}

@@ -1,0 +1,133 @@
+
+module main (
+    input clk,       // clock
+    input rst,       // reset
+    input left2,       // button input left
+    input center1,       // button input right
+    input right0,        // button input center
+    output result[2],  // press counter
+    output high1,
+    output high2,
+    output high3,
+    output low1,
+    output low2,
+    output low3,
+    output butt1,
+    output butt2,
+    output butt3,
+    output rowOn[3]
+  ) {
+  
+  .clk(clk) {
+    
+    button_conditioner button_cond1;     // button input conditioner
+    button_conditioner button_cond2;     // button input reset_conditioner
+    button_conditioner button_cond3;     // button input conditioner
+    // dff clk_ctr[24];
+    .rst(rst) {
+      counter edge_ctr(#SIZE(1),#DIV(22)); //detect edge every ~0.08sec
+      
+      propogate mypropogater;
+    }
+  }
+  .clk(edge_ctr.value){
+    edge_detector edge_detector1(#RISE(1), #FALL(0)); // detect rising edges
+    edge_detector edge_detector2(#RISE(1), #FALL(0)); // detect rising edges
+    edge_detector edge_detector3(#RISE(1), #FALL(0)); // detect rising edges
+    .rst(rst) {
+      dff left[1];
+      dff right[1];
+      dff cent[1];
+      
+    }
+  }
+  
+  alu myalu;
+  
+  
+  always {
+    myalu.alufn = 6b0;
+    myalu.a = 8b0;
+    myalu.b = 8b0; 
+    
+    mypropogater.num = 3b110;
+    rowOn = mypropogater.rowLit;
+    butt1 = left.q;
+    butt2 = cent.q;
+    butt3 = right.q;
+    
+    
+    //connect propogator output to mymain so i can pass it to mojo top
+    high1 = mypropogater.row1;
+    high2 = mypropogater.row2;
+    high3 = mypropogater.row3;
+    low1 = mypropogater.gnd1;
+    low2 = mypropogater.gnd2;
+    low3 = mypropogater.gnd3;
+       
+    //instantiate my dff
+    
+    //propagate should have a dff counter somewhere where i can refer to.
+    button_cond1.in = left2;            // raw button input
+    edge_detector1.in = button_cond1.out; // input to the edge_detector
+    button_cond2.in = center1;            // raw button input
+    edge_detector2.in = button_cond2.out; // input to the edge_detector
+    button_cond3.in = right0;            // raw button input
+    edge_detector3.in = button_cond3.out; // input to the edge_detector
+    
+    result = 0; //default to 0
+    
+    if(edge_detector1.out){
+       left.d = 1;
+      }
+    if(edge_detector2.out){
+       cent.d = 1;
+      }
+    if(edge_detector3.out){
+       right.d = 1;
+      }
+   // if(mypropogater.propClk){ 
+      // where i should check position of light
+      //check if value matched first, else return 0
+      //if(propage counter value ==9, if matched, check location using propagation counter, if 9, add 1 point, if 10, add 2 points, else return 0
+      //if (pattern[2] == left.q && pattern[1] == cent.q && pattern[0] == right.q){ // if pattern matched
+      //  if(propagate counter ==9) result = 1;
+      //  else if (counter ==10) result =2;
+      //  else result = 0;
+      
+      myalu.alufn = Inst.CMPEQ;
+      myalu.a[2] = left.q;
+      myalu.a[1] = cent.q;
+      myalu.a[0] = right.q; 
+      myalu.b [2:0] = mypropogater.numSeq;
+      
+        
+      
+              
+      if(mypropogater.rowLit==RowNumb.ROW2){
+              if (myalu.alu[0]){
+                  result = 2b01;
+          }
+      else{
+      result = 2b11;
+      }
+      
+      //will default to 10 when goes to row 3
+    }
+      else if (mypropogater.rowLit==RowNumb.ROW3){
+              if (myalu.alu[0]){
+                  result = 2b10;
+          }
+      else{
+      result = 2b11;
+      }
+    }
+      
+      else{
+              result = 2b00; //person gets 0 points
+               left.d=0;
+              right.d=0;
+              cent.d=0;
+    }
+}
+}

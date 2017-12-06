@@ -1,9 +1,9 @@
-Release 14.7 - xst P.20131013 (nt)
+Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Reading design: mojo_top_0.prj
 
@@ -53,19 +53,25 @@ Netlist Hierarchy                  : rebuilt
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/pipeline_12.v" into library work
-Parsing module <pipeline_12>.
-Analyzing Verilog file "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/edge_detector_9.v" into library work
-Parsing module <edge_detector_9>.
-Analyzing Verilog file "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/counter_8.v" into library work
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/pipeline_14.v" into library work
+Parsing module <pipeline_14>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/counter_17.v" into library work
+Parsing module <counter_17>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/propogate_9.v" into library work
+Parsing module <propogate_9>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/edge_detector_10.v" into library work
+Parsing module <edge_detector_10>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/counter_8.v" into library work
 Parsing module <counter_8>.
-Analyzing Verilog file "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/button_conditioner_5.v" into library work
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/button_conditioner_5.v" into library work
 Parsing module <button_conditioner_5>.
-Analyzing Verilog file "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/reset_conditioner_1.v" into library work
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/alu_13.v" into library work
+Parsing module <alu_13>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/reset_conditioner_1.v" into library work
 Parsing module <reset_conditioner_1>.
-Analyzing Verilog file "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/bcounter_4.v" into library work
-Parsing module <bcounter_4>.
-Analyzing Verilog file "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" into library work
+Parsing module <main_4>.
+Analyzing Verilog file "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
 Parsing module <mojo_top_0>.
 
 =========================================================================
@@ -76,81 +82,89 @@ Elaborating module <mojo_top_0>.
 
 Elaborating module <reset_conditioner_1>.
 
-Elaborating module <bcounter_4>.
+Elaborating module <main_4>.
 
 Elaborating module <button_conditioner_5>.
 
-Elaborating module <pipeline_12>.
+Elaborating module <pipeline_14>.
 
 Elaborating module <counter_8>.
 
-Elaborating module <edge_detector_9>.
-WARNING:Xst:2972 - "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/mojo_top_0.v" line 31. All outputs of instance <reset_cond> of block <reset_conditioner_1> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/mojo_top_0.v" line 38. All outputs of instance <reset_cond2> of block <reset_conditioner_1> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+Elaborating module <propogate_9>.
+
+Elaborating module <counter_17>.
+
+Elaborating module <edge_detector_10>.
+
+Elaborating module <alu_13>.
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" Line 110: Assignment to M_myalu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" Line 111: Assignment to M_myalu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" Line 112: Assignment to M_myalu_n ignored, since the identifier is never used
+WARNING:Xst:2972 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" line 26. All outputs of instance <button_cond1> of block <button_conditioner_5> are unconnected in block <main_4>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" line 33. All outputs of instance <button_cond2> of block <button_conditioner_5> are unconnected in block <main_4>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" line 40. All outputs of instance <button_cond3> of block <button_conditioner_5> are unconnected in block <main_4>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" line 79. All outputs of instance <edge_detector1> of block <edge_detector_10> are unconnected in block <main_4>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" line 86. All outputs of instance <edge_detector2> of block <edge_detector_10> are unconnected in block <main_4>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" line 93. All outputs of instance <edge_detector3> of block <edge_detector_10> are unconnected in block <main_4>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/mojo_top_0.v" line 37. All outputs of instance <reset_cond> of block <reset_conditioner_1> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/mojo_top_0.v" line 44. All outputs of instance <reset_cond2> of block <reset_conditioner_1> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <mojo_top_0>.
-    Related source file is "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/mojo_top_0.v".
+    Related source file is "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/mojo_top_0.v".
 WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <spi_ss> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/mojo_top_0.v" line 31: Output port <out> of the instance <reset_cond> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/mojo_top_0.v" line 38: Output port <out> of the instance <reset_cond2> is unconnected or connected to loadless signal.
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 63
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 63
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 63
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 63
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 63
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 63
+INFO:Xst:3210 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/mojo_top_0.v" line 37: Output port <out> of the instance <reset_cond> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/mojo_top_0.v" line 44: Output port <out> of the instance <reset_cond2> is unconnected or connected to loadless signal.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 81
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 81
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 81
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 81
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 81
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 81
     Summary:
 	inferred   6 Tristate(s).
 Unit <mojo_top_0> synthesized.
 
 Synthesizing Unit <reset_conditioner_1>.
-    Related source file is "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/reset_conditioner_1.v".
+    Related source file is "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/reset_conditioner_1.v".
     Found 4-bit register for signal <M_stage_q>.
     Summary:
 	inferred   4 D-type flip-flop(s).
 Unit <reset_conditioner_1> synthesized.
 
-Synthesizing Unit <bcounter_4>.
-    Related source file is "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/bcounter_4.v".
-    Found 1-bit register for signal <M_left_q>.
-    Found 1-bit register for signal <M_right_q>.
-    Found 1-bit register for signal <M_cent_q>.
-    Found 8-bit register for signal <M_ctr_q>.
-    Found 8-bit adder for signal <_n0046> created at line 95.
-    Found 8-bit adder for signal <_n0047> created at line 95.
-    Found 8-bit adder for signal <M_ctr_q[7]_GND_3_o_add_2_OUT> created at line 95.
+Synthesizing Unit <main_4>.
+    Related source file is "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v".
+INFO:Xst:3210 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" line 79: Output port <out> of the instance <edge_detector1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" line 86: Output port <out> of the instance <edge_detector2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" line 93: Output port <out> of the instance <edge_detector3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" line 106: Output port <z> of the instance <myalu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" line 106: Output port <v> of the instance <myalu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/main_4.v" line 106: Output port <n> of the instance <myalu> is unconnected or connected to loadless signal.
+    WARNING:Xst:2404 -  FFs/Latches <M_right_q<0><0:0>> (without init value) have a constant value of 0 in block <main_4>.
+    WARNING:Xst:2404 -  FFs/Latches <M_cent_q<0><0:0>> (without init value) have a constant value of 0 in block <main_4>.
+    WARNING:Xst:2404 -  FFs/Latches <M_left_q<0><0:0>> (without init value) have a constant value of 0 in block <main_4>.
     Summary:
-	inferred   3 Adder/Subtractor(s).
-	inferred  11 D-type flip-flop(s).
-Unit <bcounter_4> synthesized.
+	inferred   5 Multiplexer(s).
+Unit <main_4> synthesized.
 
-Synthesizing Unit <button_conditioner_5>.
-    Related source file is "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/button_conditioner_5.v".
-    Found 20-bit register for signal <M_ctr_q>.
-    Found 20-bit adder for signal <M_ctr_q[19]_GND_4_o_add_2_OUT> created at line 39.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  20 D-type flip-flop(s).
-Unit <button_conditioner_5> synthesized.
-
-Synthesizing Unit <pipeline_12>.
-    Related source file is "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/pipeline_12.v".
-    Found 2-bit register for signal <M_pipe_q>.
+Synthesizing Unit <pipeline_14>.
+    Related source file is "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/pipeline_14.v".
+    Found 1-bit register for signal <M_pipe_q<1>>.
+    Found 1-bit register for signal <M_pipe_q<0>>.
     Summary:
 	inferred   2 D-type flip-flop(s).
-Unit <pipeline_12> synthesized.
+Unit <pipeline_14> synthesized.
 
 Synthesizing Unit <counter_8>.
-    Related source file is "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/counter_8.v".
+    Related source file is "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/counter_8.v".
     Found 23-bit register for signal <M_ctr_q>.
     Found 23-bit adder for signal <M_ctr_d> created at line 35.
     Summary:
@@ -158,30 +172,91 @@ Synthesizing Unit <counter_8>.
 	inferred  23 D-type flip-flop(s).
 Unit <counter_8> synthesized.
 
-Synthesizing Unit <edge_detector_9>.
-    Related source file is "D:/Downloads/Term 4/50.002 - Com structs/mojo projects/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/edge_detector_9.v".
-    Found 1-bit register for signal <M_last_q>.
+Synthesizing Unit <propogate_9>.
+    Related source file is "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/propogate_9.v".
+    Found 4x3-bit Read Only RAM for signal <_n0016>
     Summary:
-	inferred   1 D-type flip-flop(s).
-Unit <edge_detector_9> synthesized.
+	inferred   1 RAM(s).
+Unit <propogate_9> synthesized.
+
+Synthesizing Unit <counter_17>.
+    Related source file is "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/counter_17.v".
+    Found 26-bit register for signal <M_ctr_q>.
+    Found 26-bit adder for signal <M_ctr_d> created at line 35.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+Unit <counter_17> synthesized.
+
+Synthesizing Unit <alu_13>.
+    Related source file is "C:/Users/Jing Yun/Documents/GitHub/3Butt/work/planAhead/3Butt/3Butt.srcs/sources_1/imports/verilog/alu_13.v".
+    Found 9-bit subtractor for signal <GND_10_o_GND_10_o_sub_4_OUT> created at line 45.
+    Found 9-bit adder for signal <n0127[8:0]> created at line 37.
+    Found 8x8-bit multiplier for signal <a[7]_b[7]_MuLt_0_OUT> created at line 34.
+    Found 16-bit shifter logical left for signal <GND_10_o_b[2]_shift_left_5_OUT> created at line 53
+    Found 16-bit shifter logical right for signal <GND_10_o_b[2]_shift_right_6_OUT> created at line 56
+    Found 16-bit shifter arithmetic right for signal <a[7]_b[2]_shift_right_7_OUT> created at line 59
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu1<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit comparator greater for signal <b[7]_a[7]_LessThan_12_o> created at line 74
+    Found 8-bit comparator lessequal for signal <n0027> created at line 81
+    Found 8-bit comparator equal for signal <a[7]_b[7]_equal_16_o> created at line 88
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  16 Latch(s).
+	inferred   3 Comparator(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <alu_13> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 7
- 20-bit adder                                          : 3
+# RAMs                                                 : 1
+ 4x3-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 4
  23-bit adder                                          : 1
- 8-bit adder                                           : 3
-# Registers                                            : 15
- 1-bit register                                        : 6
- 2-bit register                                        : 3
- 20-bit register                                       : 3
+ 26-bit adder                                          : 1
+ 9-bit adder                                           : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 3
  23-bit register                                       : 1
+ 26-bit register                                       : 1
  4-bit register                                        : 1
- 8-bit register                                        : 1
+# Latches                                              : 16
+ 1-bit latch                                           : 16
+# Comparators                                          : 3
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 5
+ 2-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 6
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
 
 =========================================================================
 
@@ -190,31 +265,57 @@ Macro Statistics
 =========================================================================
 
 
-Synthesizing (advanced) Unit <bcounter_4>.
-The following registers are absorbed into accumulator <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <bcounter_4> synthesized (advanced).
-
-Synthesizing (advanced) Unit <button_conditioner_5>.
+Synthesizing (advanced) Unit <counter_17>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <button_conditioner_5> synthesized (advanced).
+Unit <counter_17> synthesized (advanced).
 
 Synthesizing (advanced) Unit <counter_8>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
 Unit <counter_8> synthesized (advanced).
 
+Synthesizing (advanced) Unit <propogate_9>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0016> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 3-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <M_ctr_value>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <propogate_9> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 1
+# RAMs                                                 : 1
+ 4x3-bit single-port distributed Read Only RAM         : 1
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 2
  8-bit adder                                           : 1
-# Counters                                             : 4
- 20-bit up counter                                     : 3
+ 8-bit subtractor                                      : 1
+# Counters                                             : 2
  23-bit up counter                                     : 1
-# Accumulators                                         : 1
- 8-bit up accumulator cin                              : 1
-# Registers                                            : 16
- Flip-Flops                                            : 16
+ 26-bit up counter                                     : 1
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Comparators                                          : 3
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 5
+ 2-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
 
 =========================================================================
 
@@ -224,18 +325,48 @@ Macro Statistics
 
 Optimizing unit <mojo_top_0> ...
 
-Optimizing unit <bcounter_4> ...
+Optimizing unit <main_4> ...
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_0> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_1> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_2> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_3> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_4> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_5> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_6> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_7> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_8> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_9> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_10> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_11> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_12> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_13> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_14> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_15> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_16> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_17> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_18> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_19> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_20> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_21> of sequential type is unconnected in block <main_4>.
+WARNING:Xst:2677 - Node <edge_ctr/M_ctr_q_22> of sequential type is unconnected in block <main_4>.
+
+Optimizing unit <alu_13> ...
+WARNING:Xst:2677 - Node <alu1_7> of sequential type is unconnected in block <alu_13>.
+WARNING:Xst:2677 - Node <alu1_4> of sequential type is unconnected in block <alu_13>.
+WARNING:Xst:2677 - Node <alu1_6> of sequential type is unconnected in block <alu_13>.
+WARNING:Xst:2677 - Node <alu1_5> of sequential type is unconnected in block <alu_13>.
+WARNING:Xst:2677 - Node <alu1_3> of sequential type is unconnected in block <alu_13>.
+WARNING:Xst:2677 - Node <alu1_2> of sequential type is unconnected in block <alu_13>.
+WARNING:Xst:2677 - Node <alu1_1> of sequential type is unconnected in block <alu_13>.
+WARNING:Xst:2677 - Node <alu1_0> of sequential type is unconnected in block <alu_13>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 2.
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 0.
 
 Final Macro Processing ...
 
 Processing Unit <mojo_top_0> :
-	Found 2-bit shift register for signal <counter/button_cond3/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <counter/button_cond2/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <counter/button_cond/sync/M_pipe_q_1>.
 INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <reset_cond3/M_stage_q_3> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
 Unit <mojo_top_0> processed.
 
@@ -243,10 +374,8 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 101
- Flip-Flops                                            : 101
-# Shift Registers                                      : 3
- 2-bit shift register                                  : 3
+# Registers                                            : 30
+ Flip-Flops                                            : 30
 
 =========================================================================
 
@@ -269,30 +398,21 @@ Top Level Output File Name         : mojo_top_0.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 305
-#      GND                         : 9
-#      INV                         : 11
-#      LUT1                        : 79
-#      LUT2                        : 4
-#      LUT3                        : 4
-#      LUT4                        : 2
-#      LUT5                        : 8
-#      LUT6                        : 18
-#      MUXCY                       : 79
-#      VCC                         : 8
-#      XORCY                       : 83
-# FlipFlops/Latches                : 104
-#      FD                          : 6
-#      FDE                         : 3
+# BELS                             : 86
+#      GND                         : 3
+#      INV                         : 2
+#      LUT1                        : 25
+#      LUT2                        : 3
+#      MUXCY                       : 25
+#      VCC                         : 2
+#      XORCY                       : 26
+# FlipFlops/Latches                : 30
 #      FDR                         : 26
-#      FDRE                        : 65
 #      FDS                         : 4
-# Shift Registers                  : 3
-#      SRLC16E                     : 3
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 18
-#      IBUF                        : 4
+# IO Buffers                       : 15
+#      IBUF                        : 1
 #      OBUF                        : 8
 #      OBUFT                       : 6
 
@@ -303,22 +423,20 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             104  out of  11440     0%  
- Number of Slice LUTs:                  129  out of   5720     2%  
-    Number used as Logic:               126  out of   5720     2%  
-    Number used as Memory:                3  out of   1440     0%  
-       Number used as SRL:                3
+ Number of Slice Registers:              30  out of  11440     0%  
+ Number of Slice LUTs:                   30  out of   5720     0%  
+    Number used as Logic:                30  out of   5720     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    136
-   Number with an unused Flip Flop:      32  out of    136    23%  
-   Number with an unused LUT:             7  out of    136     5%  
-   Number of fully used LUT-FF pairs:    97  out of    136    71%  
-   Number of unique control sets:        16
+ Number of LUT Flip Flop pairs used:     60
+   Number with an unused Flip Flop:      30  out of     60    50%  
+   Number with an unused LUT:            30  out of     60    50%  
+   Number of fully used LUT-FF pairs:     0  out of     60     0%  
+   Number of unique control sets:         2
 
 IO Utilization: 
- Number of IOs:                          25
- Number of bonded IOBs:                  19  out of    102    18%  
+ Number of IOs:                          31
+ Number of bonded IOBs:                  16  out of    102    15%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -341,13 +459,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+--------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                | Load  |
------------------------------------+--------------------------------------+-------+
-clk                                | BUFGP                                | 104   |
-counter/edge_ctr/M_ctr_q_22        | NONE(counter/edge_detector2/M_last_q)| 3     |
------------------------------------+--------------------------------------+-------+
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 30    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -357,9 +473,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 4.789ns (Maximum Frequency: 208.812MHz)
+   Minimum period: 2.514ns (Maximum Frequency: 397.772MHz)
    Minimum input arrival time before clock: 3.526ns
-   Maximum output required time after clock: 4.312ns
+   Maximum output required time after clock: 5.280ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -368,32 +484,55 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 4.789ns (frequency: 208.812MHz)
-  Total number of paths / destination ports: 2340 / 256
+  Clock period: 2.514ns (frequency: 397.772MHz)
+  Total number of paths / destination ports: 380 / 55
 -------------------------------------------------------------------------
-Delay:               4.789ns (Levels of Logic = 3)
-  Source:            counter/button_cond2/M_ctr_q_3 (FF)
-  Destination:       counter/button_cond2/M_ctr_q_19 (FF)
+Delay:               2.514ns (Levels of Logic = 27)
+  Source:            mymain/mypropogater/ctr/M_ctr_q_0 (FF)
+  Destination:       mymain/mypropogater/ctr/M_ctr_q_25 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: counter/button_cond2/M_ctr_q_3 to counter/button_cond2/M_ctr_q_19
+  Data Path: mymain/mypropogater/ctr/M_ctr_q_0 to mymain/mypropogater/ctr/M_ctr_q_25
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             2   0.525   1.181  M_ctr_q_3 (M_ctr_q_3)
-     LUT6:I0->O            4   0.254   1.032  out1 (counter/button_cond2/out)
-     end scope: 'counter/button_cond2:counter/button_cond2/out'
-     LUT5:I2->O           19   0.235   1.260  M_button_cond2_out_inv1 (M_button_cond2_out_inv)
-     begin scope: 'counter/button_cond2:M_button_cond2_out_inv'
-     FDRE:CE                   0.302          M_ctr_q_1
+     FDR:C->Q              1   0.525   0.681  M_ctr_q_0 (M_ctr_q_0)
+     INV:I->O              1   0.255   0.000  Mcount_M_ctr_q_lut<0>_INV_0 (Mcount_M_ctr_q_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  Mcount_M_ctr_q_cy<0> (Mcount_M_ctr_q_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<1> (Mcount_M_ctr_q_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<2> (Mcount_M_ctr_q_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<3> (Mcount_M_ctr_q_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<4> (Mcount_M_ctr_q_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<5> (Mcount_M_ctr_q_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<6> (Mcount_M_ctr_q_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<7> (Mcount_M_ctr_q_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<8> (Mcount_M_ctr_q_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<9> (Mcount_M_ctr_q_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<10> (Mcount_M_ctr_q_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<11> (Mcount_M_ctr_q_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<12> (Mcount_M_ctr_q_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<13> (Mcount_M_ctr_q_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<14> (Mcount_M_ctr_q_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<15> (Mcount_M_ctr_q_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<16> (Mcount_M_ctr_q_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<17> (Mcount_M_ctr_q_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<18> (Mcount_M_ctr_q_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<19> (Mcount_M_ctr_q_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<20> (Mcount_M_ctr_q_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<21> (Mcount_M_ctr_q_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<22> (Mcount_M_ctr_q_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_M_ctr_q_cy<23> (Mcount_M_ctr_q_cy<23>)
+     MUXCY:CI->O           0   0.023   0.000  Mcount_M_ctr_q_cy<24> (Mcount_M_ctr_q_cy<24>)
+     XORCY:CI->O           1   0.206   0.000  Mcount_M_ctr_q_xor<25> (Result<25>)
+     FDR:D                     0.074          M_ctr_q_25
     ----------------------------------------
-    Total                      4.789ns (1.316ns logic, 3.473ns route)
-                                       (27.5% logic, 72.5% route)
+    Total                      2.514ns (1.833ns logic, 0.681ns route)
+                                       (72.9% logic, 27.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 7 / 7
+  Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
 Offset:              3.526ns (Levels of Logic = 3)
   Source:            rst_n (PAD)
@@ -414,23 +553,26 @@ Offset:              3.526ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 8 / 8
+  Total number of paths / destination ports: 6 / 3
 -------------------------------------------------------------------------
-Offset:              4.312ns (Levels of Logic = 2)
-  Source:            counter/M_ctr_q_3 (FF)
-  Destination:       led<3> (PAD)
+Offset:              5.280ns (Levels of Logic = 4)
+  Source:            mymain/mypropogater/ctr/M_ctr_q_24 (FF)
+  Destination:       high1 (PAD)
   Source Clock:      clk rising
 
-  Data Path: counter/M_ctr_q_3 to led<3>
+  Data Path: mymain/mypropogater/ctr/M_ctr_q_24 to high1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             6   0.525   0.875  M_ctr_q_3 (M_ctr_q_3)
-     end scope: 'counter:count<3>'
-     OBUF:I->O                 2.912          led_3_OBUF (led<3>)
+     FDR:C->Q              4   0.525   0.912  M_ctr_q_24 (M_ctr_q_24)
+     end scope: 'mymain/mypropogater/ctr:value<0>'
+     end scope: 'mymain/mypropogater:rowLit<0>'
+     LUT2:I0->O            1   0.250   0.681  M_mypropogater_row31 (high3)
+     end scope: 'mymain:high3'
+     OBUF:I->O                 2.912          high3_OBUF (high3)
     ----------------------------------------
-    Total                      4.312ns (3.437ns logic, 0.875ns route)
-                                       (79.7% logic, 20.3% route)
+    Total                      5.280ns (3.687ns logic, 1.593ns route)
+                                       (69.8% logic, 30.2% route)
 
 =========================================================================
 
@@ -438,33 +580,24 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock clk
----------------------------+---------+---------+---------+---------+
-                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------------------+---------+---------+---------+---------+
-clk                        |    4.789|         |         |         |
-counter/edge_ctr/M_ctr_q_22|    2.575|         |         |         |
----------------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock counter/edge_ctr/M_ctr_q_22
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.301|         |         |         |
+clk            |    2.514|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.60 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.18 secs
  
 --> 
 
-Total memory usage is 249056 kilobytes
+Total memory usage is 345088 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    8 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :   67 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
 

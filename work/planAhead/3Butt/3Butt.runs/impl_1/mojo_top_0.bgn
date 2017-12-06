@@ -1,13 +1,13 @@
-Release 14.7 - Bitgen P.20131013 (nt)
+Release 14.7 - Bitgen P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Loading device for application Rf_Device from file '6slx9.nph' in environment
-D:\Xilinx\14.7\ISE_DS\ISE\.
+C:\Xilinx\14.7\ISE_DS\ISE\.
    "mojo_top_0" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -2
 Opened constraints file mojo_top_0.pcf.
 
-Mon Dec 04 19:04:13 2017
+Wed Dec 06 21:31:06 2017
 
-D:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\bitgen.exe -g Binary:Yes -g Compress -w -intstyle pa mojo_top_0_routed.ncd mojo_top_0.bit mojo_top_0.pcf 
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -g Binary:Yes -g Compress -w -intstyle pa mojo_top_0_routed.ncd mojo_top_0.bit mojo_top_0.pcf 
 
 Summary of Bitgen Options:
 +----------------------+----------------------+
@@ -129,9 +129,23 @@ There were 1 CONFIG constraint(s) processed from mojo_top_0.pcf.
    CONFIG VCCAUX = "3.3"
 
 Running DRC.
-DRC detected 0 errors and 0 warnings.
-Creating bit map...
-Saving bit stream in "mojo_top_0.bit".
-Bitstream compression saved 1546848 bits.
-Saving bit stream in "mojo_top_0.bin".
-Bitstream generation is complete.
+ERROR:PhysDesignRules:368 - The signal <led(2)_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <led(3)_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <led(4)_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <led(5)_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <led(6)_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <led(7)_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:10 - The network <led(2)_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <led(3)_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <led(4)_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <led(5)_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <led(6)_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <led(7)_OBUF> is completely unrouted.
+ERROR:Bitgen:25 - DRC detected 12 errors and 0 warnings.  Please see the
+   previously displayed individual error or warning messages for more details.

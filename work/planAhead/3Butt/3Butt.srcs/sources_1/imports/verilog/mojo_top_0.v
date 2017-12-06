@@ -19,7 +19,13 @@ module mojo_top_0 (
     input avr_rx_busy,
     input button,
     input button2,
-    input button3
+    input button3,
+    output reg high1,
+    output reg high2,
+    output reg high3,
+    output reg low1,
+    output reg low2,
+    output reg low3
   );
   
   
@@ -47,17 +53,29 @@ module mojo_top_0 (
     .in(M_reset_cond3_in),
     .out(M_reset_cond3_out)
   );
-  wire [8-1:0] M_counter_count;
-  reg [1-1:0] M_counter_button;
-  reg [1-1:0] M_counter_button2;
-  reg [1-1:0] M_counter_button3;
-  bcounter_4 counter (
+  wire [2-1:0] M_mymain_result;
+  wire [1-1:0] M_mymain_high1;
+  wire [1-1:0] M_mymain_high2;
+  wire [1-1:0] M_mymain_high3;
+  wire [1-1:0] M_mymain_low1;
+  wire [1-1:0] M_mymain_low2;
+  wire [1-1:0] M_mymain_low3;
+  reg [1-1:0] M_mymain_left2;
+  reg [1-1:0] M_mymain_center1;
+  reg [1-1:0] M_mymain_right0;
+  main_4 mymain (
     .clk(clk),
     .rst(rst),
-    .button(M_counter_button),
-    .button2(M_counter_button2),
-    .button3(M_counter_button3),
-    .count(M_counter_count)
+    .left2(M_mymain_left2),
+    .center1(M_mymain_center1),
+    .right0(M_mymain_right0),
+    .result(M_mymain_result),
+    .high1(M_mymain_high1),
+    .high2(M_mymain_high2),
+    .high3(M_mymain_high3),
+    .low1(M_mymain_low1),
+    .low2(M_mymain_low2),
+    .low3(M_mymain_low3)
   );
   
   always @* begin
@@ -70,9 +88,15 @@ module mojo_top_0 (
     spi_miso = 1'bz;
     spi_channel = 4'bzzzz;
     avr_rx = 1'bz;
-    M_counter_button = !button;
-    M_counter_button2 = !button2;
-    M_counter_button3 = !button3;
-    led = M_counter_count;
+    M_mymain_left2 = !button;
+    M_mymain_center1 = !button2;
+    M_mymain_right0 = !button3;
+    high1 = M_mymain_high1;
+    high2 = M_mymain_high2;
+    high3 = M_mymain_high3;
+    low1 = M_mymain_low1;
+    low2 = M_mymain_low2;
+    low3 = M_mymain_low3;
+    led[0+1-:2] = M_mymain_result;
   end
 endmodule

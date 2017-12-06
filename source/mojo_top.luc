@@ -13,7 +13,13 @@ module mojo_top (
     input avr_rx_busy,      // AVR RX buffer full
     input button,            // Super cool button!
     input button2,
-    input button3
+    input button3,
+    output high1,
+    output high2,
+    output high3,
+    output low1,
+    output low2,
+    output low3
   ) {
   
   sig rst;                  // reset signal
@@ -25,9 +31,11 @@ module mojo_top (
     reset_conditioner reset_cond2;
     reset_conditioner reset_cond3;
     .rst(rst){
-      bcounter counter;        // button press counter
+     // bcounter counter;        // button press counter
+      main mymain;
     }
   }
+  
   
   always {
     reset_cond.in = ~rst_n;   // input raw inverted reset signal
@@ -40,9 +48,18 @@ module mojo_top (
     spi_channel = bzzzz;      // not using flags
     avr_rx = bz;              // not using serial port
     
-    counter.button = !button; // make button active high 
-    counter.button2 = !button2; 
-    counter.button3 = !button3; 
-    led = counter.count;      // connect the counter to the LEDs
+    mymain.left2 = !button; // make button active high 
+    mymain.center1 = !button2; 
+    mymain.right0 = !button3; 
+    //make lights go light up
+    high1 = mymain.high1;
+    high2 = mymain.high2;
+    high3 = mymain.high3;
+    low1 = mymain.low1;
+    low2 = mymain.low2;
+    low3 = mymain.low3;
+    
+    led[1:0] = mymain.result;      // connect the counter to the LEDs
+    
   }
 }

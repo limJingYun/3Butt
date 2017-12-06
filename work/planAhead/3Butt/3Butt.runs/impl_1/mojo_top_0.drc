@@ -1,8 +1,27 @@
-Release 14.7 Drc P.20131013 (nt)
+Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon Dec 04 19:04:13 2017
+Wed Dec 06 21:31:06 2017
 
 drc -z mojo_top_0_routed.ncd mojo_top_0.pcf
 
-DRC detected 0 errors and 0 warnings.
+ERROR:PhysDesignRules:368 - The signal <led(2)_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <led(3)_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <led(4)_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <led(5)_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <led(6)_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <led(7)_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:10 - The network <led(2)_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <led(3)_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <led(4)_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <led(5)_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <led(6)_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <led(7)_OBUF> is completely unrouted.
+ERROR:Bitgen:25 - DRC detected 12 errors and 0 warnings.  Please see the
+   previously displayed individual error or warning messages for more details.

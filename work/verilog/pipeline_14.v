@@ -8,7 +8,7 @@
    Parameters:
      DEPTH = NUM_SYNC
 */
-module pipeline_12 (
+module pipeline_14 (
     input clk,
     input in,
     output reg out

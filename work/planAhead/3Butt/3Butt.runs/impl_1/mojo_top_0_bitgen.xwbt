@@ -1,8 +1,0 @@
-INTSTYLE=pa
-INFILE=D:\Downloads\Term 4\50.002 - Com structs\mojo projects\3Butt\work\planAhead\3Butt\3Butt.runs\impl_1\mojo_top_0_routed.ncd
-OUTFILE=D:\Downloads\Term 4\50.002 - Com structs\mojo projects\3Butt\work\planAhead\3Butt\3Butt.runs\impl_1\mojo_top_0.bit
-FAMILY=Spartan6
-PART=xc6slx9-2tqg144
-WORKINGDIR=D:\Downloads\Term 4\50.002 - Com structs\mojo projects\3Butt\work\planAhead\3Butt\3Butt.runs\impl_1
-LICENSE=WebPack
-USER_INFO=211409636_0_0_551

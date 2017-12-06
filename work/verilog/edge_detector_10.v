@@ -9,7 +9,7 @@
      RISE = 1
      FALL = 0
 */
-module edge_detector_9 (
+module edge_detector_10 (
     input clk,
     input in,
     output reg out

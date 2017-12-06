@@ -1,0 +1,62 @@
+module bcounter (
+    input clk,       // clock
+    input rst,       // reset
+    input button,    // button input
+    input button2,
+    input button3,
+    output count[8]  // press counter
+  ) {
+  
+  .clk(clk) {
+    
+    button_conditioner button_cond;     // button input conditioner
+    button_conditioner button_cond2;     // button input reset_conditioner
+    button_conditioner button_cond3;     // button input conditioner
+    // dff clk_ctr[24];
+    .rst(rst) {
+      dff ctr[8]; // our lovely counter
+      //prev was 1000 log2(1000) is 10, 10bits for 1 secs
+      counter edge_ctr(#SIZE(1),#DIV(22)); //detect edge every ~0.16sec
+      dff left[1];
+      dff right[1];
+      dff cent[1];
+    }
+  }
+  .clk(edge_ctr.value){
+    edge_detector edge_detector(#RISE(1), #FALL(0)); // detect rising edges
+    edge_detector edge_detector2(#RISE(1), #FALL(0)); // detect rising edges
+    edge_detector edge_detector3(#RISE(1), #FALL(0)); // detect rising edges
+    .rst(rst) {
+    }
+  }
+  
+  always {
+    //propagate should have a dff counter somewhere where i can refer to.
+    button_cond.in = button;            // raw button input
+    edge_detector.in = button_cond.out; // input to the edge_detector
+    button_cond2.in = button2;            // raw button input
+    edge_detector2.in = button_cond2.out; // input to the edge_detector
+    button_cond3.in = button3;            // raw button input
+    edge_detector3.in = button_cond3.out; // input to the edge_detector
+    count = ctr.q;                      // output the counter
+    
+    if(edge_detector.out){
+       left.d = 1;
+      }
+    if(edge_detector2.out){
+       cent.d = 1;
+      }
+    if(edge_detector3.out){
+       right.d = 1;
+      }
+    if(edge_ctr.value){ // where i should check position of light
+      //check if value matched first, else return 0
+      //if(propage counter value ==9, if matched, check location using propagation counter, if 9, add 1 point, if 10, add 2 points, else return 0
+      ctr.d = ctr.q + left.q + right.q + cent.q;
+      left.d =0;
+      right.d=0;
+      cent.d=0;
+      }
+    
+  }
+}

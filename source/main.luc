@@ -1,0 +1,65 @@
+module main (
+    input clk,       // clock
+    input rst,       // reset
+    input bish,       // button input left
+    input bash,       // button input right
+    input shi,        // button input center
+    output result[2]  // press counter
+  ) {
+  
+  .clk(clk) {
+    
+    button_conditioner button_cond1;     // button input conditioner
+    button_conditioner button_cond2;     // button input reset_conditioner
+    button_conditioner button_cond3;     // button input conditioner
+    // dff clk_ctr[24];
+    .rst(rst) {
+      counter edge_ctr(#SIZE(1),#DIV(22)); //detect edge every ~0.08sec
+      dff left[1];
+      dff right[1];
+      dff cent[1];
+    }
+  }
+  .clk(edge_ctr.value){
+    edge_detector edge_detector1(#RISE(1), #FALL(0)); // detect rising edges
+    edge_detector edge_detector2(#RISE(1), #FALL(0)); // detect rising edges
+    edge_detector edge_detector3(#RISE(1), #FALL(0)); // detect rising edges
+    .rst(rst) {
+    }
+  }
+  
+  always {
+    //propagate should have a dff counter somewhere where i can refer to.
+    button_cond1.in = bish;            // raw button input
+    edge_detector1.in = button_cond1.out; // input to the edge_detector
+    button_cond2.in = bash;            // raw button input
+    edge_detector2.in = button_cond2.out; // input to the edge_detector
+    button_cond3.in = shi;            // raw button input
+    edge_detector3.in = button_cond3.out; // input to the edge_detector
+    
+    result = 0; //default to 0
+    
+    if(edge_detector1.out){
+       left.d = 1;
+      }
+    if(edge_detector2.out){
+       cent.d = 1;
+      }
+    if(edge_detector3.out){
+       right.d = 1;
+      }
+    if(edge_ctr.value){ // where i should check position of light
+      //check if value matched first, else return 0
+      //if(propage counter value ==9, if matched, check location using propagation counter, if 9, add 1 point, if 10, add 2 points, else return 0
+      //if (pattern[2] == left.q && pattern[1] == cent.q && pattern[0] == right.q){ // if pattern matched
+      //  if(propagate counter ==9) result = 1;
+      //  else if (counter ==10) result =2;
+      //  else result = 0;
+      
+      left.d =0;
+      right.d=0;
+      cent.d=0;
+      }
+    
+  }
+}
